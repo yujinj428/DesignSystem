@@ -1,0 +1,179 @@
+{
+  "action": "READ_PROJECT_UDC_LIST",
+  "msgType": "RESPONSE",
+  "req": {},
+  "res": {
+    "component": [
+        {
+            "compName": "udc_app",
+            "uuid": "/cm/project_udc/mobile/app.xml",
+            "screenName": "app",
+            "category": "공통",
+            "author": "UAP모바일팀",
+            "summary": "App의 일반적인 기능을 모아놓은 플러그인으로 이벤트 및 API를 제공한다",
+            "description": "기능 정의",
+            "remark": "비고"
+        },
+        {
+            "compName": "udc_audioRecorder",
+            "uuid": "/cm/project_udc/mobile/audioRecorder.xml",
+            "screenName": "audioRecorder",
+            "category": "공통",
+            "author": "UAP모바일팀",
+            "summary": "음성 녹음에 관련된 녹음, 저장, 일시중지, 재개, 취소 등의 API를 제공한다.",
+            "description": "기능 정의",
+            "remark": "비고"
+        },
+        {
+            "compName": "udc_websquareplugin",
+            "uuid": "/cm/project_udc/mobile/websquareplugin.xml",
+            "screenName": "websquareplugin",
+            "category": "공통",
+            "author": "UAP모바일팀",
+            "summary": "WebSquare 플러그인을 추가하면 웹스퀘어에서 exceldownload 함수 호출 시 앱에 엑셀 저장 기능을 제공한다.",
+            "description": "기능 정의",
+            "remark": "비고"
+        },
+        {
+            "compName": "udc_view",
+            "uuid": "/cm/project_udc/mobile/view.xml",
+            "screenName": "view",
+            "category": "공통",
+            "author": "UAP모바일팀",
+            "summary": "toast, snacker, notification 같은 네이티브 뷰를 호출하는 API를 제공한다.",
+            "description": "기능 정의",
+            "remark": "비고"
+        },
+        {
+            "compName": "udc_screenRecorder",
+            "uuid": "/cm/project_udc/mobile/screenRecorder.xml",
+            "screenName": "screenRecorder",
+            "category": "공통",
+            "author": "UAP모바일팀",
+            "summary": "디바이스(폰,테블릿)에 화면 녹화/녹음에 필요한 녹화, 저장, 취소, 일시정지 등에 API를 제공한다.",
+            "description": "기능 정의",
+            "remark": "비고"
+        },
+        {
+            "compName": "udc_screenprotector",
+            "uuid": "/cm/project_udc/mobile/screenprotector.xml",
+            "screenName": "screenprotector",
+            "category": "공통",
+            "author": "UAP모바일팀",
+            "summary": "웹뷰에 스크린샷,화면녹화를 막는다.",
+            "description": "기능 정의",
+            "remark": "비고"
+        },
+        {
+            "compName": "udc_paint",
+            "uuid": "/cm/project_udc/mobile/paint.xml",
+            "screenName": "paint",
+            "category": "공통",
+            "author": "UAP모바일팀",
+            "summary": "웹뷰 위에 레이어를 띄워 펜기능을 제공한다.",
+            "description": "기능 정의",
+            "remark": "비고"
+        },
+        {
+            "compName": "udc_network",
+            "uuid": "/cm/project_udc/mobile/network.xml",
+            "screenName": "network",
+            "category": "공통",
+            "author": "UAP모바일팀",
+            "summary": "network 변화를 감지하거나 현재 네트워크 접속상태를 확인하는 API를 제공한다.",
+            "description": "기능 정의",
+            "remark": "비고"
+        },
+        {
+            "compName": "udc_misc",
+            "uuid": "/cm/project_udc/mobile/misc.xml",
+            "screenName": "misc",
+            "category": "공통",
+            "author": "UAP모바일팀",
+            "summary": "여러가지 잡다한 기능들을 모아놓은 플러그인으로 브라우저열기, 전화, 주소록, SMS 같은 기능들을 제공한다.",
+            "description": "기능 정의",
+            "remark": "비고"
+        },
+        {
+            "compName": "udc_license",
+            "uuid": "/cm/project_udc/mobile/license.xml",
+            "screenName": "license",
+            "category": "공통",
+            "author": "UAP모바일팀",
+            "summary": "open source license를 출력하는 API를 제공한다.",
+            "description": "기능 정의",
+            "remark": "비고"
+        },
+        {
+            "compName": "udc_inappbrowser",
+            "uuid": "/cm/project_udc/mobile/inappbrowser.xml",
+            "screenName": "inappbrowser",
+            "category": "공통",
+            "author": "UAP모바일팀",
+            "summary": "webpage를 별도 webview로 호출하는 API를 제공한다.",
+            "description": "기능 정의",
+            "remark": "비고"
+        },
+        {
+            "compName": "udc_geolocation",
+            "uuid": "/cm/project_udc/mobile/geolocation.xml",
+            "screenName": "geolocation",
+            "category": "공통",
+            "author": "UAP모바일팀",
+            "summary": "위도,경도 등의 현재 위치정보를 반환하거나 일정간격으로 위치정보를 반환하는 API를 제공한다.",
+            "description": "기능 정의",
+            "remark": "비고"
+        },
+        {
+            "compName": "udc_device",
+            "uuid": "/cm/project_udc/mobile/device.xml",
+            "screenName": "device",
+            "category": "공통",
+            "author": "UAP모바일팀",
+            "summary": "디바이스의 모델, 플랫폼, OS버전 등에 데이터를 반환하는 API제공한다.",
+            "description": "기능 정의",
+            "remark": "비고"
+        },
+        {
+            "compName": "udc_contents",
+            "uuid": "/cm/project_udc/mobile/contents.xml",
+            "screenName": "contents",
+            "category": "공통",
+            "author": "UAP모바일팀",
+            "summary": "Content관련 API를 제공하는 플러그인으로 image picker, file picker, fileDownload 기능을 제공한다.",
+            "description": "기능 정의",
+            "remark": "비고"
+        },
+        {
+            "compName": "udc_camera",
+            "uuid": "/cm/project_udc/mobile/camera.xml",
+            "screenName": "camera",
+            "category": "공통",
+            "author": "UAP모바일팀",
+            "summary": "사진촬영 및 갤러리(포토라이브러리) API를 제공한다.",
+            "description": "기능 정의",
+            "remark": "비고"
+        },
+        {
+            "compName": "udc_biometric",
+            "uuid": "/cm/project_udc/mobile/biometric.xml",
+            "screenName": "biometric",
+            "category": "공통",
+            "author": "UAP모바일팀",
+            "summary": "바이오인증을 이용한 데이터 저장, 출력, 삭제 등에 API을 제공한다.",
+            "description": "기능 정의",
+            "remark": "비고"
+        },
+        {
+            "compName": "udc_barcode",
+            "uuid": "/cm/project_udc/mobile/barcode.xml",
+            "screenName": "barcode",
+            "category": "공통",
+            "author": "UAP모바일팀",
+            "summary": "다양한 종류의 barcode들을 스캔하여 데이터를 반환하는 API를 제공한다.",
+            "description": "기능 정의",
+            "remark": "비고"
+        }
+    ]
+    }
+}

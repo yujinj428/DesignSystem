@@ -1,0 +1,912 @@
+{
+    "action": "READ_PROJECT_COMPONENT_DETAIL",
+    "msgType": "RESPONSE",
+    "req": {},
+    "res": {
+        "api": [
+            {
+            "name": "reset",
+            "description": "wmatrix app의 엔진, 리소스, DB, cache 및 모든 설정을 reset 한다.",
+            "parameter": [
+                {
+                    "name": "callback",
+                    "type": "Function",
+                    "description": "callback 함수"
+                },
+                {
+                    "name": "callback.statusCode",
+                    "type": "String",
+                    "description": "코드"
+                },
+                {
+                    "name": "callback.msg",
+                    "type": "String",
+                    "description": "메시지"
+                },
+                {
+                    "name": "callback.data",
+                    "type": "String",
+                    "description": "데이터"
+                },
+                {
+                    "name": "options",
+                    "type": "Object[]",
+                    "description": "app reset parameter"
+                },
+                {
+                    "name": "options.fileName",
+                    "type": "String",
+                    "description": "파일 이름 [default: string]"
+                },
+                {
+                    "name": "options.popup",
+                    "type": "Boolean",
+                    "description": "리셋 pop up 생성 여부 [default: true]"
+                },
+                {
+                    "name": "options.message",
+                    "type": "String",
+                    "description": "리셋 pop up 메시지 [default: '앱을 초기화하고 종료합니다.']"
+                },
+                {
+                    "name": "options.clearData",
+                    "type": "Boolean",
+                    "description": "options.clearData 데이터 초기화 여부 [default: true]"
+                },
+                {
+                    "name": "options.clearCache",
+                    "type": "Boolean",
+                    "description": "options.clearCache 캐시 초기화 여부 [default: true]"
+                }
+            ],
+            "return": [
+
+            ] 
+        },
+        {
+            "name": "version",
+            "description": "wmatrix app의 version 정보를 callback에 param으로 반환한다.",
+            "parameter": [
+                {
+                    "name": "callback",
+                    "type": "Function",
+                    "description": "callback 함수"
+                },
+                {
+                    "name": "callback.statusCode",
+                    "type": "String",
+                    "description": "코드"
+                },
+                {
+                    "name": "callback.msg",
+                    "type": "String",
+                    "description": "메시지"
+                },
+                {
+                    "name": "callback.data",
+                    "type": "String",
+                    "description": "데이터 {version: 1.0.0, versionCode: 1} "
+                }
+            ],
+            "return": [
+                
+            ] 
+        },
+        {
+            "name": "checkDeviceType",
+            "description": "장비가 패드인지 폰인지 구분하여 callback에 param으로 반환한다.",
+            "parameter": [
+                {
+                    "name": "callback",
+                    "type": "Function",
+                    "description": "callback 함수"
+                },
+                {
+                    "name": "callback.statusCode",
+                    "type": "String",
+                    "description": "코드"
+                },
+                {
+                    "name": "callback.msg",
+                    "type": "String",
+                    "description": "메시지"
+                },
+                {
+                    "name": "callback.data",
+                    "type": "String",
+                    "description": "데이터 {type: tablet or phone}"
+                }
+                ],
+                "return": [
+                    
+                ] 
+            },
+            {
+                "name": "finish",
+                "description": "wmatrix app의 엔진, 리소스, DB, cache 및 모든 설정을 reset 한다.",
+                "parameter": [
+                {
+                    "name": "callback",
+                    "type": "Function",
+                    "description": "callback 함수"
+                },
+                {
+                    "name": "callback.statusCode",
+                    "type": "String",
+                    "description": "코드"
+                },
+                {
+                    "name": "callback.msg",
+                    "type": "String",
+                    "description": "메시지"
+                },
+                {
+                    "name": "options",
+                    "type": "Object[]",
+                    "description": "app finish parameter"
+                },
+                {
+                    "name": "options.popup",
+                    "type": "Boolean",
+                    "description": "종료 popup 생성 여부 [default: false] "
+                },
+                {
+                    "name": "options.message",
+                    "type": "String",
+                    "description": "종료 popup에 보여줄 Message [default: '앱을 종료합니다.'] "
+                },
+                {
+                    "name": "options.cancelButton",
+                    "type": "Boolean",
+                    "description": "종료 popup에 취소 버튼 보여줄지 여부 [default: true]"
+                }
+                ],
+                "return": [
+                    
+                ] 
+            },
+            {
+                "name": "startWebView",
+                "description": "새로운 webview에서 지정된 페이지를 로드한다.",
+                "parameter": [
+                {
+                    "name": "callback",
+                    "type": "Function",
+                    "description": "callback 함수"
+                },
+                {
+                    "name": "callback.statusCode",
+                    "type": "String",
+                    "description": "코드"
+                },
+                {
+                    "name": "callback.msg",
+                    "type": "String",
+                    "description": "메시지"
+                },
+                {
+                    "name": "options",
+                    "type": "Object[]",
+                    "description": "app startWebView parameter"
+                },
+                {
+                    "name": "options.url",
+                    "type": "String",
+                    "description": "실행할 page 경로 또는 URL"
+                },
+                {
+                    "name": "options.header",
+                    "type": "Object",
+                    "description": "{key: 'value'}"
+                }
+            ],
+            "return": [
+                
+            ] 
+        },
+        {
+            "name": "checkAppInstalled",
+            "description": "Android: 전달한 package의 앱이 설치되어 있는지 확인한다. <br> iOS: url scheme을 이용하여 앱이 설치되어 있는지 확인한다. (URL Scheme을 지원하는 앱만 확인이 가능)",
+            "parameter": [
+                {
+                    "name": "callback",
+                    "type": "Function",
+                    "description": "callback 함수"
+                },
+                {
+                    "name": "callback.statusCode",
+                    "type": "String",
+                    "description": "코드"
+                },
+                {
+                    "name": "callback.msg",
+                    "type": "String",
+                    "description": "메시지"
+                },
+                {
+                    "name": "options",
+                    "type": "Object[]",
+                    "description": "app checkAppInstalled parameter"
+                },
+                {
+                    "name": "options.packageName",
+                    "type": "String",
+                    "description": "(Android Only) 앱 패키지 명"
+                },
+                {
+                    "name": "options.appName",
+                    "type": "String",
+                    "description": "(Android Only) 앱 이름"
+                },
+                {
+                    "name": "options.storeURL",
+                    "type": "String",
+                    "description": "(Android Only) 앱 스토어 주소 "
+                },
+                {
+                    "name": "options.appScheme",
+                    "type": "String",
+                    "description": "(iOS Only) URL Scheme명"
+                },
+                {
+                    "name": "options.storeScheme",
+                    "type": "String",
+                    "description": "(iOS Only) store Scheme"
+                },
+                {
+                    "name": "options.gotoStore",
+                    "type": "Boolean",
+                    "description": "스토어 이동 여부"
+                }
+            ],
+            "return": [
+                
+            ] 
+        },
+        {
+            "name": "screenCapture",
+            "description": "현재 보이는 화면을 capter하여 해당 이미지 base64 string을 Web으로 전달한다.",
+            "parameter": [
+                {
+                    "name": "callback",
+                    "type": "Function",
+                    "description": "callback 함수"
+                },
+                {
+                    "name": "callback.statusCode",
+                    "type": "String",
+                    "description": "코드"
+                },
+                {
+                    "name": "callback.msg",
+                    "type": "String",
+                    "description": "메시지"
+                },
+                {
+                    "name": "callback.data",
+                    "type": "String",
+                    "description": "데이터 {imgBase64: 'data:image/jpg;base64,~~'}"
+                },
+                {
+                    "name": "options",
+                    "type": "Object[]",
+                    "description": "app screenCapture parameter"
+                },
+                {
+                    "name": "options.allView",
+                    "type": "Boolean",
+                    "description": "native를 포함한 모든 view를 캡처할지 여부 [default: false]"
+                },
+                {
+                    "name": "options.saveAlbum",
+                    "type": "Boolean",
+                    "description": "screen capture한 이미지를 album에 저장할지 여부 [default: false]"
+                },
+                {
+                    "name": "options.quality",
+                    "type": "Int",
+                    "description": "capture할 image의 quality [default: 70]"
+                }
+            ],
+            "return": [
+                
+            ] 
+        },
+        {
+            "name": "getPreference",
+            "description": "native preference에서 값을 가져온다.",
+            "parameter": [
+                {
+                    "name": "callback",
+                    "type": "Function",
+                    "description": "callback 함수"
+                },
+                {
+                    "name": "callback.statusCode",
+                    "type": "String",
+                    "description": "코드"
+                },
+                {
+                    "name": "callback.msg",
+                    "type": "String",
+                    "description": "메시지"
+                },
+                {
+                    "name": "callback.data",
+                    "type": "String",
+                    "description": "데이터 {getPreference: 'value'}"
+                },
+                {
+                    "name": "options",
+                    "type": "Object[]",
+                    "description": "app getPreference parameter"
+                },
+                {
+                    "name": "options.key",
+                    "type": "String",
+                    "description": "가져올 Preference Key"
+                }
+            ],
+            "return": [
+                
+            ] 
+        },
+        {
+            "name": "setPreference",
+            "description": "native preference에 값을 저장한다.",
+            "parameter": [
+                {
+                    "name": "callback",
+                    "type": "Function",
+                    "description": "callback 함수"
+                },
+                {
+                    "name": "callback.statusCode",
+                    "type": "String",
+                    "description": "코드"
+                },
+                {
+                    "name": "callback.msg",
+                    "type": "String",
+                    "description": "메시지"
+                },
+                {
+                    "name": "options",
+                    "type": "Object[]",
+                    "description": "app setPreference parameter"
+                },
+                {
+                    "name": "options.key",
+                    "type": "String",
+                    "description": "저장할 Preference Key"
+                },
+                {
+                    "name": "options.value",
+                    "type": "String",
+                    "description": "저장할 Preference Value"
+                }
+            ],
+            "return": [
+                
+            ] 
+        },
+        {
+            "name": "removePreference",
+            "description": "native preference에서 값을 삭제한다.",
+            "parameter": [
+                {
+                    "name": "callback",
+                    "type": "Function",
+                    "description": "callback 함수"
+                },
+                {
+                    "name": "callback.statusCode",
+                    "type": "String",
+                    "description": "코드"
+                },
+                {
+                    "name": "callback.msg",
+                    "type": "String",
+                    "description": "메시지"
+                },
+                {
+                    "name": "options",
+                    "type": "Object[]",
+                    "description": "app removePreference parameter"
+                },
+                {
+                    "name": "options.key",
+                    "type": "String",
+                    "description": "삭제할 Preference Key"
+                }
+            ],
+            "return": [
+                
+            ] 
+        },
+        {
+            "name": "shareData",
+            "description": "주어진 data의 URL을 이용하여 다른 앱과 공유한다.",
+            "parameter": [
+                {
+                    "name": "callback",
+                    "type": "Function",
+                    "description": "callback 함수"
+                },
+                {
+                    "name": "callback.statusCode",
+                    "type": "String",
+                    "description": "코드"
+                },
+                {
+                    "name": "callback.msg",
+                    "type": "String",
+                    "description": "메시지"
+                },
+                {
+                    "name": "callback.data",
+                    "type": "String",
+                    "description": "데이터"
+                },
+                {
+                    "name": "options",
+                    "type": "Object[]",
+                    "description": "app shareData parameter"
+                },
+                {
+                    "name": "options.type",
+                    "type": "String",
+                    "description": "share할 data type {0: URL, 1: image} "
+                },
+                {
+                    "name": "options.data",
+                    "type": "String",
+                    "description": "share할 data URL"
+                },
+                {
+                    "name": "options.title",
+                    "type": "String",
+                    "description": "share chooser에 표시 될 title"
+                }
+            ],
+            "return": [
+                
+            ] 
+        },
+        {
+            "name": "webviewTouchListener",
+            "description": "webview에서 touch event (ACTION_UP)이 발생했을 때 Web에 전달되는 이벤트 리스너를 등록한다.",
+            "parameter": [
+                {
+                    "name": "listener",
+                    "type": "Function",
+                    "description": "이벤트 발생 시 실행할 함수"
+                }
+            ],
+            "return": [
+                
+            ] 
+        },
+        {
+            "name": "screenOrientation",
+            "description": "(Android only) 주어진 Orientation 속성을 Native View에 설정한다.",
+            "parameter": [
+                {
+                    "name": "callback",
+                    "type": "Function",
+                    "description": "callback 함수"
+                },
+                {
+                    "name": "callback.statusCode",
+                    "type": "String",
+                    "description": "코드"
+                },
+                {
+                    "name": "callback.msg",
+                    "type": "String",
+                    "description": "메시지"
+                },
+                {
+                    "name": "options",
+                    "type": "Object[]",
+                    "description": "app screenOrientation parameter"
+                },
+                {
+                    "name": "options.orientation",
+                    "type": "Int",
+                    "description": "설정할 orientation 속성 {0: Sensor, 1: Portrait, 2: Landscape, 3: Landscape Sensor}"
+                }
+            ],
+            "return": [
+                
+            ] 
+        },
+        {
+            "name": "speakTTS",
+            "description": "message를 음성으로 읽어준다.",
+            "parameter": [
+                {
+                    "name": "callback",
+                    "type": "Function",
+                    "description": "callback 함수"
+                },
+                {
+                    "name": "callback.statusCode",
+                    "type": "String",
+                    "description": "코드"
+                },
+                {
+                    "name": "callback.msg",
+                    "type": "String",
+                    "description": "메시지"
+                },
+                {
+                    "name": "options",
+                    "type": "Object[]",
+                    "description": "app speakTTS parameter"
+                },
+                {
+                    "name": "options.language",
+                    "type": "String",
+                    "description": "언어코드 {ko: 한국어, en: 영어, ja: 일본어, zh_cn: 중국어 간체, zh_tw: 중국어 번체}"
+                },
+                {
+                    "name": "options.message",
+                    "type": "String",
+                    "description": "음성으로 말할 메시지 내용"
+                },
+                {
+                    "name": "options.speechSpeed",
+                    "type": "Float",
+                    "description": "음성으로 말하는 속도 [default: 1.0]"
+                }
+            ],
+            "return": [
+                
+            ] 
+        },
+        {
+            "name": "getLog",
+            "description": "앱 로그를 가져온다.",
+            "parameter": [
+                {
+                    "name": "callback",
+                    "type": "Function",
+                    "description": "callback 함수"
+                },
+                {
+                    "name": "callback.statusCode",
+                    "type": "String",
+                    "description": "코드"
+                },
+                {
+                    "name": "callback.msg",
+                    "type": "String",
+                    "description": "메시지"
+                },
+                {
+                    "name": "callback.data",
+                    "type": "String",
+                    "description": "데이터 {log: 'log'}"
+                },
+                {
+                    "name": "options",
+                    "type": "Object[]",
+                    "description": "app getLog parameter"
+                },
+                {
+                    "name": "options.type",
+                    "type": "Int",
+                    "description": "로그 타입 {0: 전체 로그, 1: 웹 콘솔 로그, 2: 웹스퀘어 로그} [default:0]"
+                }
+            ],
+            "return": [
+                
+            ] 
+        },
+        {
+            "name": "clearLog",
+            "description": "기록되어 있는 앱 로그를 초기화한다.",
+            "parameter": [
+                {
+                    "name": "callback",
+                    "type": "Function",
+                    "description": "callback 함수"
+                },
+                {
+                    "name": "callback.statusCode",
+                    "type": "String",
+                    "description": "코드"
+                },
+                {
+                    "name": "callback.msg",
+                    "type": "String",
+                    "description": "메시지"
+                }
+                ],
+                "return": [
+                    
+                ] 
+            },
+            {
+                "name": "getLogUpload",
+                "description": "앱 로그를 가져온 후 특정 URL로 로그 파일을 업로드한다.",
+                "parameter": [
+                {
+                    "name": "callback",
+                    "type": "Function",
+                    "description": "callback 함수"
+                },
+                {
+                    "name": "callback.statusCode",
+                    "type": "String",
+                    "description": "코드"
+                },
+                {
+                    "name": "callback.msg",
+                    "type": "String",
+                    "description": "메시지"
+                },
+                {
+                    "name": "options",
+                    "type": "Object[]",
+                    "description": "app getLogUpload parameter"
+                },
+                {
+                    "name": "options.type",
+                    "type": "Int",
+                    "description": "로그 타입 {0: 전체 로그, 1: 웹 콘솔 로그, 2: 웹스퀘어 로그} [default:0] "
+                },
+                {
+                    "name": "options.fileName",
+                    "type": "String",
+                    "description": "로그 파일 명 (필수)"
+                },
+                {
+                    "name": "options.uploadUrl",
+                    "type": "String",
+                    "description": "업로드 할 서버 URL (필수/POST/Content-Type:multipart/form-data)"
+                }
+            ],
+            "return": [
+                
+            ] 
+        },
+        {
+            "name": "getLogMail",
+            "description": "앱 로그를 가져온 후 메일로 로그를 전달한다.",
+            "parameter": [
+                {
+                    "name": "callback",
+                    "type": "Function",
+                    "description": "callback 함수"
+                },
+                {
+                    "name": "callback.statusCode",
+                    "type": "String",
+                    "description": "코드"
+                },
+                {
+                    "name": "callback.msg",
+                    "type": "String",
+                    "description": "메시지"
+                },
+                {
+                    "name": "options",
+                    "type": "Object[]",
+                    "description": "app getLogMail parameter"
+                },
+                {
+                    "name": "options.type",
+                    "type": "Int",
+                    "description": "로그 타입 {0: 전체 로그, 1: 웹 콘솔 로그, 2: 웹스퀘어 로그} [default:0] "
+                },
+                {
+                    "name": "options.fileName",
+                    "type": "String",
+                    "description": "로그 파일 명 (isAttachFile이 true인 경우 필수)"
+                },
+                {
+                    "name": "options.isAttachFile",
+                    "type": "Boolean",
+                    "description": "메일 전송 시 파일 첨부 여부 {true: 파일 첨부, false: 메일 내용에 로그 내용 작성} [default: false] "
+                },
+                {
+                    "name": "options.subject",
+                    "type": "String",
+                    "description": "메일 전송 시 제목 [default: ''] "
+                },
+                {
+                    "name": "options.to",
+                    "type": "String[]",
+                    "description": "메일 수신인"
+                },
+                {
+                    "name": "options.cc",
+                    "type": "String[]",
+                    "description": "참조"
+                },
+                {
+                    "name": "options.bcc",
+                    "type": "String[]",
+                    "description": "숨은 참조 "
+                }
+            ],
+            "return": [
+                
+            ] 
+        },
+        {
+            "name": "logPath",
+            "description": "앱 로그 파일을 생성한 후 경로를 반환한다.",
+            "parameter": [
+                {
+                    "name": "callback",
+                    "type": "Function",
+                    "description": "callback 함수"
+                },
+                {
+                    "name": "callback.statusCode",
+                    "type": "String",
+                    "description": "코드"
+                },
+                {
+                    "name": "callback.msg",
+                    "type": "String",
+                    "description": "메시지"
+                },
+                {
+                    "name": "callback.data",
+                    "type": "String",
+                    "description": "데이터 {logPath: '/logpath'}"
+                },
+                {
+                    "name": "options",
+                    "type": "Object[]",
+                    "description": "app logPath parameter"
+                },
+                {
+                    "name": "options.type",
+                    "type": "Int",
+                    "description": "로그 타입 {0: 전체 로그, 1: 웹 콘솔 로그, 2: 웹스퀘어 로그} [default:0]"
+                },
+                {
+                    "name": "options.fileName",
+                    "type": "Boolean",
+                    "description": "로그 파일 명 (필수)"
+                }
+            ],
+            "return": [
+                
+            ] 
+        },
+        {
+            "name": "startSpeechToText",
+            "description": "음성 인식 후 인식된 텍스트를 반환한다.",
+            "parameter": [
+                {
+                    "name": "callback",
+                    "type": "Function",
+                    "description": "callback 함수"
+                },
+                {
+                    "name": "callback.statusCode",
+                    "type": "String",
+                    "description": "코드"
+                },
+                {
+                    "name": "callback.msg",
+                    "type": "String",
+                    "description": "메시지"
+                },
+                {
+                    "name": "callback.data",
+                    "type": "String",
+                    "description": "데이터"
+                }
+            ],
+            "return": [
+                
+            ] 
+        },
+        {
+            "name": "stopSpeechToText",
+            "description": "음성 인식 엔진을 중지한다.",
+            "parameter": [
+                {
+                    "name": "callback",
+                    "type": "Function",
+                    "description": "callback 함수"
+                },
+                {
+                    "name": "callback.statusCode",
+                    "type": "String",
+                    "description": "코드"
+                },
+                {
+                    "name": "callback.msg",
+                    "type": "String",
+                    "description": "메시지"
+                },
+                {
+                    "name": "callback.data",
+                    "type": "String",
+                    "description": "데이터"
+                }
+            ],
+            "return": [
+                
+            ] 
+        },
+        {
+            "name": "foregroundListener",
+            "description": "app이 background에서 foreground로 올라올 때 이벤트 리스너를 등록한다.",
+            "parameter": [
+                {
+                    "name": "listener",
+                    "type": "Function",
+                    "description": "이벤트 발생 시 실행할 함수"
+                }
+            ],
+            "return": [
+                
+            ] 
+        },
+        {
+            "name": "backgroundListener",
+            "description": "app이 foreground에서 background로 내려갈 때 이벤트 리스너를 등록한다.",
+            "parameter": [
+                {
+                    "name": "listener",
+                    "type": "Function",
+                    "description": "이벤트 발생 시 실행할 함수"
+                }
+            ],
+            "return": [
+                
+            ] 
+        },
+        {
+            "name": "backKeyPressedListener",
+            "description": "(Android Only) 뒤로가기 키를 눌렀을 때 Web에 전달되는 이벤트 리스너를 등록한다.",
+            "parameter": [
+                {
+                    "name": "listener",
+                    "type": "Function",
+                    "description": "이벤트 발생 시 실행할 함수"
+                 }
+            ],
+            "return": [
+                
+            ] 
+        },
+        {
+            "name": "speechToTextEventListener",
+            "description": "App 오디오 엔진의 상태 변화가 발생했을 때 Web에 전달되는 리스너를 등록한다.",
+            "parameter": [
+                {
+                    "name": "listener",
+                    "type": "Function",
+                    "description": "이벤트 발생 시 실행할 함수"
+                 }
+            ],
+            "return": [
+                
+            ] 
+        }
+    ],
+        "event": [
+           {
+            "name": "onWebviewTouched",
+            "description": "webview에서 touch event (action_up)이 발생했을 때 web에서 전달되는 리스너 등록",
+            "parameter":[
+                {
+                    "name": "listener",
+                    "type": "Function",
+                    "description": "이벤트 발생 시 실행할 함수"
+                }
+            ] 
+        }
+    ]
+    }
+  }
